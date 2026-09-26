@@ -454,7 +454,7 @@ footer{text-align:center;padding:24px;color:var(--gray);font-size:11px;border-to
       document.getElementById('profLogin').addEventListener('click',()=>authOverlay.classList.add('show')); return; }
     const mine = index.filter(m=>m.artistEmail===session.email);
     el.innerHTML = `<div class="profile-head"><div class="avatar">${esc(session.name[0]||'?').toUpperCase()}</div><div><h2>${esc(session.name)}</h2><div style="color:var(--gray);font-size:12px;">${mine.length} published</div></div></div>
-      <div class="grid" id="myGrid">${mine.length? mine.map(cardHtml).join('') : '<div class="empty">You haven\\'t published anything yet.</div>'}</div>`;
+      <div class="grid" id="myGrid">${mine.length? mine.map(cardHtml).join('') : '<div class="empty">You have not published anything yet.</div>'}</div>`;
     document.querySelectorAll('#myGrid .card').forEach(c=>c.addEventListener('click',()=>openReader(c.dataset.id)));
   }
 
